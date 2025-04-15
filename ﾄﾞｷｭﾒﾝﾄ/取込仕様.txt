@@ -1,0 +1,22 @@
+社員取込
+　kysw010_pcaを作成
+　kysw010_pcaに取込ワークを作成
+　kysw010_pcaとkysm010_pcaの重複データのkysm010_pca側を消す
+　kysm010_pcaにkysw010_pcaを追加
+　kysm010_pcaと　kysm010は１対１の関係のため
+　kysm010_pcaと　kysm010を比較し、kysm010_pcaにしか存在しない
+　データの登録を促す。
+
+　kysm010とkysm011は１：ｎ　ただし、本務は１のみ
+
+
+給与取込
+　kysw100_pcaを作成
+　kysw100_pcaと　kysm010を比較し、kysm010_pcaにしか存在しない
+　　データがある場合はエラーとする。
+　kyst100の既存レコードがある場合は削除する。（年月、従業員区分）
+　kyst100にデータ追加
+　kyst110にデータ追加
+　kysw100_pca を kyst100_pca に転送する。
+
+

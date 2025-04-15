@@ -1,0 +1,25 @@
+select
+ kysm010.m010_cd
+,kysm010.m020_bu
+,kysm010.m030_kubun
+,kysm010.m040_yaku
+,kysm010.m050_sikaku
+,kysm010.m010_01 || ' ' || kysm010.m010_02
+--,kysm010.m010_01
+--,kysm010.m010_02
+,kysm010.m010_10
+,t100_03
+,t100_23
+,t100_03+t100_23
+,ts120_01
+,ts120_03
+,t100_03+t100_23-ts120_03
+,m050_t_kisoritu
+from kysm010
+left join kyst100 on kysm010.m010_cd=kyst100.m010_cd and t100_ym='2018/04'
+left join kysts120 on kysm010.m010_cd=kysts120.m010_cd
+left join kysm050 on kysm010.m050_sikakucd=kysm050.m050_sikakucd
+where kysm010.m010_kbn=0
+and kysm010.m010_tdate is null
+and kysm010.m050_sikakucd in (3,4,5,6,7,8,9,10)
+order by kysm010.m050_sikakucd,m010_10
