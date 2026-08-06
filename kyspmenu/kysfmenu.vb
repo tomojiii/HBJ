@@ -6,21 +6,21 @@ Public Class kysfmenu
         Try
             Call KYS_Initial()
 
-            If My.Settings.update_fkg = "0" Then
+            'If My.Settings.update_fkg = "0" Then
 
-                If UPDATE_CHECK() = True Then
-                    My.Settings.update_fkg = "1"
-                    My.Settings.Save()
-                    Interaction.Shell("kyspcopy.exe", AppWinStyle.NormalFocus)
-                    'MsgBox("OK")
-                    Me.Close()
-                    End
-                End If
+            '    If UPDATE_CHECK() = True Then
+            '        My.Settings.update_fkg = "1"
+            '        My.Settings.Save()
+            '        Interaction.Shell("kyspcopy.exe", AppWinStyle.NormalFocus)
+            '        'MsgBox("OK")
+            '        Me.Close()
+            '        End
+            '    End If
 
-            End If
+            'End If
 
-            My.Settings.update_fkg = "0"
-            My.Settings.Save()
+            'My.Settings.update_fkg = "0"
+            'My.Settings.Save()
 
             Call form_init()
             Call form_clear()
